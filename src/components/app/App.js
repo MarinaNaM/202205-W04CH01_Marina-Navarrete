@@ -2,25 +2,19 @@ import './App.css';
 import { Gentelman } from '../gentelman';
 import { arrayGentelman } from '../../models/data';
 import { Button } from '../button';
+import { useState } from 'react';
+import { Info } from '../info';
 
 function App() {
+    const [gentlemen, updateGentlemen] = useState(arrayGentelman); // va a devolver [x, y]
+
     return (
         <div className="App">
+            <Info></Info>
             <div className="container">
-                <header className="main-header">
-                    <h1 className="main-title">The pointing gentlemen</h1>
-                </header>
-                <section className="controls">
-                    <p className="info">0 gentlemen pointing at you</p>
-                    <Button
-                        tag="button"
-                        classes="button button--select"
-                        content="Select all"
-                    ></Button>
-                </section>
                 <main className="main">
                     <ul className="gentlemen">
-                        {arrayGentelman.map((item) => {
+                        {gentlemen.map((item) => {
                             return (
                                 <Gentelman
                                     gentelman={item}
