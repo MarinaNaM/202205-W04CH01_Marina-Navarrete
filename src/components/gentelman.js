@@ -11,7 +11,9 @@ export function Gentelman({ gentelman }) {
                         src={'./img/' + gentelman.picture}
                         alt={gentelman.alternativeText}
                     />
-                    <span className="gentleman__initial">F</span>
+                    <span className="gentleman__initial">
+                        {gentelman.picture[0].toUpperCase()}
+                    </span>
                 </div>
                 <div className="gentleman__data-container">
                     <h2 className="gentleman__name">{gentelman.name}</h2>
