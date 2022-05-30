@@ -1,4 +1,8 @@
 export function Button({ tag, classes, content }) {
+    // handlerSelectAll(){
+
+    // }
+
     return (
         <>
             {tag === 'button' ? (
