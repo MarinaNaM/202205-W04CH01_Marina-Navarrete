@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Button } from './button';
 
 export function Gentelman({ gentelman }) {
     return (
@@ -35,8 +36,16 @@ export function Gentelman({ gentelman }) {
                         </li>
                     </ul>
                 </div>
-                <i className="icon gentleman__icon fas fa-check"></i>
-                <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
+                <Button
+                    tag="i"
+                    classes="icon gentleman__icon fas fa-check"
+                    content=""
+                ></Button>
+                <Button
+                    tag="i"
+                    classes="icon gentleman__icon gentleman__icon--delete fas fa-times"
+                    content=""
+                ></Button>
             </li>
         </>
     );
